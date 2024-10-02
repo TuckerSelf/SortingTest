@@ -1,16 +1,10 @@
-#ifdef SELECTIONSORT_H
+#ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
 
 #include <vector>
 
-class selectionSort{
-    private:
+void selectionSortA(std::vector<int> &ar);
 
-    public:
-        void selectionSortA(std::vector<int> &ar);
-
-        void selectionSortB(std::vector<int> &ar);
-
-};
+void selectionSortB(std::vector<int> &ar);
 
 #endif //SELECTIONSORT_H

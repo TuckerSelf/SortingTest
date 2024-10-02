@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void selectionSort::selectionSortA(vector<int> &ar){
+void selectionSortA(vector<int> &ar){
     int length = ar.size();
     if(length > 1){
         for(int i = 0; i < length; i++){
@@ -18,7 +18,7 @@ void selectionSort::selectionSortA(vector<int> &ar){
     }
 }
 
-void selectionSort::selectionSortB(vector<int> &ar){
+void selectionSortB(vector<int> &ar){
     int length = ar.size();
     if(length > 1){
         for(int i = 0; i < length; i++){

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector<int> mergeSort::separateVector(vector<int> &ar, int startVal, int endVal){
+vector<int> separateVector(vector<int> &ar, int startVal, int endVal){
     vector<int> output;
     int startPos = 0;
     while(ar[startPos] != startVal){
@@ -16,7 +16,7 @@ vector<int> mergeSort::separateVector(vector<int> &ar, int startVal, int endVal)
     return output;
 }
 
-void mergeSort::mergeSort(vector<int> &ar){
+void mergeSort(vector<int> &ar){
     if(ar.size() > 1){
         int frontVal = ar.front();
         int backVal = ar.back();

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void quickSort::limitQuick(vector<int> &ar, int startVal, int endVal){
+void limitQuick(vector<int> &ar, int startVal, int endVal){
     if(endVal-startVal > 1){
         int pivotPoint = rand()%(endVal-startVal);
         int pivot = ar[pivotPoint];
@@ -19,7 +19,7 @@ void quickSort::limitQuick(vector<int> &ar, int startVal, int endVal){
     }
 }
 
-void quickSort::quickSort(vector<int> &ar){
+void quickSort(vector<int> &ar){
     if(ar.size() > 1){
         int frontVal = ar.front();
         int backVal = ar.back();
