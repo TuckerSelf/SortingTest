@@ -1,2 +1,2 @@
 # SortingTest
-CSCI 352 Programming and Testing Sorting Algorithms
+CSCI 430 Programming and Testing Sorting Algorithms
