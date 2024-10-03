@@ -10,7 +10,7 @@ void countingSort(vector<int> &ar){
     vector<int> c;
 
     for(int i = 0; i <= k; i++){
-        c[i]=0;
+        c.push_back(0);
     }
     for(int j = 1; j < length; j++){
         c[ar[j]] = c[ar[j]]+1;
@@ -18,9 +18,14 @@ void countingSort(vector<int> &ar){
     for(int i = 1; i <= k; i++){
         c[i] = c[i] + c[i-1];
     }
+    for(int i = 1; i < length; i++){
+        b.push_back(0);
+    }
     for(int j = length-1; j >= 0; j--){
-        c[c[ar[j]]] = ar[j];
+        b[c[ar[j]]] = ar[j];
         c[ar[j]] = c[ar[j]]-1;
     }
-    ar = b;
+    for(int j = length; j > 0; j--){
+        ar[j] = b[j];
+    }
 }
