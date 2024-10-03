@@ -4,7 +4,7 @@ CXX=g++
 LD=g++
 CC=g++
 
-sort_test: sort_test.o main.o builtin.o selectionSort.o mergeSort.o quickSort.o insertionSort.o
+sort_test: sort_test.o main.o builtin.o selectionSort.o mergeSort.o quickSort.o insertionSort.o bubbleSort.o countingSort.o
 
 clean:
 	rm -f *.o $(TARGETS)
