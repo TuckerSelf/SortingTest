@@ -13,6 +13,13 @@
 #include <string>
 #include "sort_test.h"
 #include "builtin.h"
+#include "selectionSort.h"
+#include "mergeSort.h"
+#include "quickSort.h"
+#include "insertionSort.h"
+#include "bubbleSort.h"
+#include "countingSort.h"
+#include "radixSort.h"
 
 using namespace std;
 
@@ -28,4 +35,14 @@ int main(int argc, char **argv)
     // Run the tests
     cout << "Array Size: " << n << endl;
     t.run("Built-In STL Sort", builtinSort);
+    t.run("Selection Sort A", selectionSortA);
+    t.run("Selection Sort B", selectionSortB);
+    t.run("Merge Sort", mergeSort);
+    t.run("Quick Sort", quickSort);
+    t.run("Insertion Sort", insertionSort);
+    t.run("Bubble Sort A", bubbleSortA);
+    t.run("Bubble Sort B", bubbleSortB);
+    t.run("Bubble Sort C", bubbleSortC);
+    t.run("Counting Sort", countingSort);
+    t.run("Radix Sort", radixSort);
 }
