@@ -5,18 +5,40 @@
 using namespace std;
 
 void radixSort(vector<int> &ar){
-    int d = 32;
     int length = ar.size();
-
-    for(int i = 0; i < length; i++){
-        bitset<32> binary(ar[i]);
+    int k = ar[0];
+    for(int i = 1; i < length; 1++){
+        if(ar[i] > k){
+            k = ar[i];
+        }
     }
 
-    for(int j = 0; j < d; j++){
-
+    for(int i = 1; k/i > 0; i *= 10){
+        countingCopy(ar, length, i);
     }
+}
+
+void countingCopy(vector<int> &ar, int length, int digit){
+    vector<int> b;
+    vector<int> c;
 
     for(int i = 0; i < length; i++){
-        bitset<32> decimal(ar[i]);
+        b.push_back(0);
+    }
+    for(int i = 0; i <= 10; i++){
+        c.push_back(0);
+    }
+    for(int i = 0; i < length; i++){
+        c[(ar[i]/digit)%10]++;
+    }
+    for(int i = 1; i < 10; i++){
+        c[i] += c[i-1];
+    }
+    for(int i = length-1; i >= 0; i--){
+        b[c[(ar[i]/digit)%10]] = ar[i];
+        c[(ar[i]/digit)%10]--;
+    }
+    for(int i = length; i > 0; i--){
+        ar[i] = b[i];
     }
 }
